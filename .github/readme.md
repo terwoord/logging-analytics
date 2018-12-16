@@ -1,4 +1,5 @@
-= Ter Woord - Logging Analytics
+Ter Woord - Logging Analytics
+===
 
 ElasticSearch-based sink for Microsoft Application Insights.
 
@@ -10,7 +11,7 @@ For now, you have to build the .NET Core project. Next thing you do, is add the 
     "ElasticSearchUrls": ["http://<address of elasticsearch node 1>:9200/"],
     "OutputIndexNameFormat": "twla-{tenant-id}-{datetime}-{message-type}", /* The format of indexes to use in elasticsearch */
     "OutputIndexNameDateFormat": "yyyy-MM", 
-	"TenantListIndexName": "twla-config"  /* the elasticsearch index to use to store the tenants
+    "TenantListIndexName": "twla-config"  /* the elasticsearch index to use to store the tenants */
 ```
 
 Multiple node addresses can be specified.
