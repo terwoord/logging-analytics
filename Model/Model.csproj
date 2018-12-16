@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>TerWoord.LoggingAnalytics.Server.Models</AssemblyName>
+    <RootNamespace>TerWoord.LoggingAnalytics.Server.Models</RootNamespace>
+  </PropertyGroup>
+
+</Project>
