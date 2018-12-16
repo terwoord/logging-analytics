@@ -6,8 +6,9 @@ For now, you have to build the .NET Core project. Next thing you do, is add the 
 
 ```json
     "ElasticSearchUrls": ["http://<address of elasticsearch node 1>:9200/"],
-    "OutputIndexNameFormat": "twla-{tenant-id}-{datetime}-{message-type}",
-    "OutputIndexNameDateFormat": "yyyy-MM"
+    "OutputIndexNameFormat": "twla-{tenant-id}-{datetime}-{message-type}", /* The format of indexes to use in elasticsearch */
+    "OutputIndexNameDateFormat": "yyyy-MM", 
+	"TenantListIndexName": "twla-config"  /* the elasticsearch index to use to store the tenants
 ```
 
 Multiple node addresses can be specified.
@@ -25,7 +26,7 @@ Now you need to add known instrumentation keys. Do so by ```POST```ing the follo
 
 The identifier is the exact instrumentation key to use in the Client SDK configuration. The name is a descriptive name, which is not yet used anywhere.
 
-Now you have to restart the service, to make the changes effect. (This is a known limitation, to be resolved at some point..)
+Now you have to restart the service, to make the changes effect. (This is a known limitation, to be resolved at some point. See #1)
 
 Now the service is usable, and is able to process Application Insight data.
 
